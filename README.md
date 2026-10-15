@@ -6,8 +6,9 @@ capacity, humans direct every flow, and anonymity keeps the two apart. Pre-regis
 Thon Ly · Miss Aquarius℠ (AI collaboration, disclosed) · Silicon Wat℠
 
 **Status: started 2026-10-15. Nothing has been modeled yet.** The plan is in [`PLAN.md`](PLAN.md). The
-pre-registration will be pushed before the first line of model code, and GitHub's push record is its
-timestamp.
+pre-registration will be pushed before the first line of model code. Every file is timestamped from day one
+(GitHub's push record, RFC 3161 and OpenTimestamps; [`TIMESTAMPS.md`](TIMESTAMPS.md)), and Software Heritage
+archives the repository daily.
 
 ## The design under test
 
@@ -38,9 +39,12 @@ evidence. This repository supplies the first two.
    rubber-stamping, and from a miscalibrated AI under the third design, side by side.
 4. **Gaming.** Does funding capacity instead of recipients change the incentive to game whatever signal
    the AI uses?
+5. **Does the pull exist in people at all?** The empirical arm ([`EMPIRICAL.md`](EMPIRICAL.md)) measures
+   it in a pre-registered online experiment (attributed against anonymous AI funding, with a human-funder
+   arm), and measures leakage in public payment data.
 
 Question 1 is close to true by construction: if people respond to attribution, attribution matters. The
-model earns its keep on the thresholds in questions 1 and 3, and on question 2.
+model earns its keep on the thresholds in questions 1 and 3 and on question 2; question 5 tests the premise.
 
 ## What this is not
 

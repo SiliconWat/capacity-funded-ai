@@ -9,11 +9,13 @@ edited.*
 2. **Prior-art check** of the modeling questions: donor influence on grantees, anonymous giving,
    crowding out, statistical de-anonymization of payments. What is already known is cited, not re-derived.
 3. **`PREREGISTRATION.md`**: the model, the parameter ranges, the predictions, and what would count against
-   the paper, pushed before any model code. Timestamped (OpenTimestamps and RFC 3161).
+   the paper, pushed before any model code. Dated within minutes by the RFC 3161 job and stamped to Bitcoin
+   (`TIMESTAMPS.md`), and mirrored to a registry reviewers recognize (OSF or AsPredicted).
 4. **The formal model** in `MODEL.md`, then the **simulation** (Python, agent-based), with a control that
    the code reproduces a case whose answer is known in closed form.
 5. **Results and a paper**, submitted for peer review.
-6. **An empirical arm**, if one can be found: the questions above need real behavior to calibrate against.
+6. **The empirical arm** ([`EMPIRICAL.md`](EMPIRICAL.md)): calibration from published evidence (alongside
+   step 2); a pre-registered online experiment, the part a grant would fund; leakage in public payment data.
 
 ## Model design (draft, not the pre-registration)
 
@@ -47,5 +49,5 @@ the two distributions differ, which would make matching the human distribution a
 
 Anthropic's Economic Futures Program (announced June 2025) offered research grants and API credits for work
 on AI's economic effects. Before applying: confirm the program is still open and what it funds. As
-described in 2025 it favored empirical research, so a simulation alone is a weaker fit; step 6 matters. A
+described in 2025 it favored empirical research, so a simulation alone is a weaker fit; the experiment in `EMPIRICAL.md` (E2) is the fundable part. A
 grant also needs a named recipient, an individual or an organization, to be settled first.
