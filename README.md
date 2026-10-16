@@ -42,6 +42,10 @@ evidence. This repository supplies the first two.
 5. **Does the pull exist in people at all?** The empirical arm ([`EMPIRICAL.md`](EMPIRICAL.md)) measures
    it in a pre-registered online experiment (attributed against anonymous AI funding, with a human-funder
    arm), and measures leakage in public payment data.
+6. **Control evaluation (AI Safety & Security).** If the AI funder is misaligned and tries to steer money to
+   chosen recipients, how much can it capture under each design? Under the paper's current form, where a
+   publicly verifiable draw picks the recipients, the answer should be zero by construction; the model
+   measures what that guarantee costs.
 
 Question 1 is close to true by construction: if people respond to attribution, attribution matters. The
 model earns its keep on the thresholds in questions 1 and 3 and on question 2; question 5 tests the premise.
@@ -55,7 +59,9 @@ paper's claim.
 
 ## Funding
 
-None at present. Any funding will be disclosed here.
+None at present. **Policy, fixed before any funding (founder 2026-10-15):** every funder and amount is
+disclosed here; no funder has review rights over findings, the code, the data or the paper; results are
+published whatever they show, including results that narrow the paper's claim.
 
 ## License
 

@@ -5,49 +5,61 @@ edited.*
 
 ## Steps
 
-1. **Model design** (below, draft). Reviewed before anything is fixed.
-2. **Prior-art check** of the modeling questions: donor influence on grantees, anonymous giving,
-   crowding out, statistical de-anonymization of payments. What is already known is cited, not re-derived.
+1. **Model design** (`MODEL.md`, draft). Reviewed by the founder before anything is fixed.
+2. **Prior-art check** of the modeling questions, published in full including what fails: donor influence on
+   grantees, anonymous giving, crowding out, statistical de-anonymization of payments, AI control, and
+   principal-agent theory. What is already known is cited, not re-derived.
 3. **`PREREGISTRATION.md`**: the model, the parameter ranges, the predictions, and what would count against
-   the paper, pushed before any model code. Dated within minutes by the RFC 3161 job and stamped to Bitcoin
+   the paper, pushed before any model code. Dated within minutes by the RFC 3161 job, stamped to Bitcoin
    (`TIMESTAMPS.md`), and mirrored to a registry reviewers recognize (OSF or AsPredicted).
-4. **The formal model** in `MODEL.md`, then the **simulation** (Python, agent-based), with a control that
-   the code reproduces a case whose answer is known in closed form.
-5. **Results and a paper**, submitted for peer review.
-6. **The empirical arm** ([`EMPIRICAL.md`](EMPIRICAL.md)): calibration from published evidence (alongside
-   step 2); a pre-registered online experiment, the part a grant would fund; leakage in public payment data.
+4. **The simulation** (Python, agent-based), with the controls in `MODEL.md` run before any result is read.
+5. **Results and a paper**, submitted for peer review (venues below).
+6. **The empirical arm** (`EMPIRICAL.md`): calibration from published evidence (alongside step 2); the
+   pre-registered online experiment; leakage in public payment data.
 
-## Model design (draft, not the pre-registration)
+## Reproducibility (fixed now, enforced from the first line of code)
 
-**Agents.** One AI funder with a budget per period and a noisy estimate of where funds do good
-(misjudgment rate ε). *N* human directors, each with a container and preferences of their own. *M*
-recipients.
+- Versions pinned in `requirements.txt`; Python 3.12.
+- Every run seeded; the seed written into its output.
+- One command regenerates every figure and number; numbers enter the paper only from generated files.
+- CI (added with the first code) reruns a small version of every figure and every control on each push.
 
-**Regimes.**
+## Venues (researched 2026-10-15; confirm each before submitting)
 
-- *S* (sole agent): the AI pays recipients by its own estimate.
-- *B* (approval bottleneck): the AI proposes; an approver handles *k* proposals per period and approves
-  the rest at a rubber-stamp rate ρ.
-- *C* (capacity-funded, anonymous): the AI adds to containers; directors pay recipients by their own
-  preferences.
-- *C′* (capacity-funded, attributed): as *C*, but directors see the AI's contribution and shift toward its
-  revealed preferences with strength λ.
+| Paper | Venue | Why | Timing |
+|---|---|---|---|
+| The model (questions 1–4, 6) | **AIES** (AAAI/ACM Conference on AI, Ethics, and Society) | AI-governance scope; "We welcome work that appears as a preprint"; 10 pages | 2027 call not out; the 2026 deadline was May 21 |
+| The model, economics framing | **ACM EC** (Economics and Computation) | topics include "Agent-based modeling" and "Laboratory and field experiments"; arXiv allowed; fully open access | 2027 call not out; 2026 papers were due February 9 |
+| The simulation in depth | **JASSS** (Journal of Artificial Societies and Social Simulation) | the agent-based-modeling journal | rolling |
+| The experiment (E2) | **Experimental Economics**, as a **Registered Report** | Stage 1 is reviewed before any data exist, which fits a pre-registered design | rolling |
+| Not now | FAccT 2027 | abstracts due 2026-10-27: too soon for work with no model yet | — |
 
-**Leakage arm.** AI contributions are drawn from one distribution of amounts and timing, human
-contributions from another. An observer tries to tell them apart (a likelihood-ratio test or a classifier).
-The effective pull is λ times the probability of correct attribution, so *C* becomes *C′* to the degree
-anonymity leaks.
-
-**Outcomes.** A soft-control index (how closely flows track the AI's preferences beyond what directors'
-own preferences predict) · losses from misjudgment · throughput · concentration · the response to gaming.
-
-**Candidate predictions, to be fixed in the pre-registration:** the threshold λ\* at which *C′* loses its
-advantage over *B*; the number of contributions after which an observer attributes AI funds reliably when
-the two distributions differ, which would make matching the human distribution a design requirement.
+Unaffiliated authors: FAccT asks them to create an OpenReview account early; ACM venues charge an
+article-processing fee to authors outside ACM Open institutions. Every venue: ask whether the paper's Zenodo
+deposit counts as prior publication.
 
 ## Grants
 
-Anthropic's Economic Futures Program (announced June 2025) offered research grants and API credits for work
-on AI's economic effects. Before applying: confirm the program is still open and what it funds. As
-described in 2025 it favored empirical research, so a simulation alone is a weaker fit; the experiment in `EMPIRICAL.md` (E2) is the fundable part. A
-grant also needs a named recipient, an individual or an organization, to be settled first.
+- **Anthropic Economic Futures Program: research awards are CLOSED.** Its page says: "We are not currently
+  accepting applications." When open (2025), awards were up to $50,000 for empirical research on AI's
+  economic impacts, aimed at economists, data scientists and PhD students. Institutions can propose a
+  partnership by email (economicfutures@anthropic.com). The experiment (E2) is the fundable part.
+- **A grant needs a named recipient:** the founder as an individual, or an organization. Silicon Wat's
+  nonprofit is not formed. To be settled before any application.
+- **Ethics review costs** (for E2), as published: Solutions IRB lists an exempt review at $1,200 and an
+  expedited social-behavioral review at $2,100; whether it accepts unaffiliated researchers is not stated.
+
+## Fixes owed in the source paper (its own revision, not here)
+
+The re-survey of 2026-10-15 found, in *Capacity-Funded for AI, Human-Disbursed*:
+
+1. §5.1 step 1 pays half of the AI's self-thank reward into the resident's spendable wallet, while §5.2 says
+   the AI has "Zero over flow-direction". Resolve it or concede it.
+2. The worked example predates the paper's own current form (in kind, chosen by a verifiable draw).
+3. The names predate the 2026-10-04 rename (re-tip jar → Re-Thank Fund℠).
+4. The AI-control and principal-agent literatures are not cited.
+
+## Who reviews
+
+`REVIEWERS.md`: a hostile economist (mechanism design) before the pre-registration; the founder's approval
+before anything is fixed.
