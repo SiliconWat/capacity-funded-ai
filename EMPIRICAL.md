@@ -15,6 +15,7 @@ verify before the pre-registration cites them:
 | Sequential fundraising | Vesterlund (2003), *Journal of Public Economics* | why a visible gift works as a quality signal |
 | Matching | Karlan & List (2007), *American Economic Review* | response to a funder's visible commitment |
 | Visibility of giving | Andreoni & Petrie (2004), *Journal of Public Economics* | the effect of identification itself |
+| Anonymity and later donors | Peacey & Sanders (2013), *Masked Heroes* (70,000 Virgin Money Giving donations): anonymous gifts raised later donors' gifts about 4%; a 2026 study of GoFundMe medical campaigns reports the opposite sign (to be verified) | the sign of the pull is contested in real data |
 | Deference to algorithms | Dietvorst, Simmons & Massey (2015), *JEP: General*; Logg, Minson & Moore (2019), *OBHDP* | aversion and appreciation: the sign of λ can be negative |
 | Funder influence on grantees | Pfeffer & Salancik (1978), *The External Control of Organizations* | the paper's own analogy (§4.1) |
 
