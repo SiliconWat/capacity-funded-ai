@@ -15,7 +15,8 @@ edited.*
 4. **The simulation** (Python, agent-based), with the controls in `MODEL.md` run before any result is read.
 5. **Results and a paper**, submitted for peer review (venues below).
 6. **The empirical arm** (`EMPIRICAL.md`): calibration from published evidence (alongside step 2); the
-   pre-registered online experiment; leakage in public payment data.
+   pre-registered online experiment, **decided after step 4 by the λ\* the simulation finds** (founder
+   2026-11-26: the simulation runs first, with no human participants); leakage in public payment data.
 
 ## Reproducibility (fixed now, enforced from the first line of code)
 

@@ -41,7 +41,8 @@ evidence. This repository supplies the first two.
    the AI uses?
 5. **Does the pull exist in people at all?** The empirical arm ([`EMPIRICAL.md`](EMPIRICAL.md)) measures
    it in a pre-registered online experiment (attributed against anonymous AI funding, with a human-funder
-   arm), and measures leakage in public payment data.
+   arm), and measures leakage in public payment data. The simulation runs first, with no human
+   participants; whether the experiment runs is decided by what the simulation finds.
 6. **Control evaluation (AI Safety & Security).** If the AI funder is misaligned and tries to steer money to
    chosen recipients, how much can it capture under each design? Under the paper's current form, where a
    publicly verifiable draw picks the recipients, the answer should be zero by construction; the model

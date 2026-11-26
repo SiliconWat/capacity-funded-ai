@@ -27,3 +27,7 @@ first and log it here.
 
 - 2026-10-15: both legs installed (weekly OpenTimestamps upgrade, Sundays 04:17 UTC; RFC 3161 manifest,
   Sundays 06:17 UTC and on pushes touching the frozen paths). Nothing frozen yet.
+- 2026-11-26: `MODEL.md.ots`, `PLAN.md.ots` and `EMPIRICAL.md.ots` rotated to `<name>.r1.ots`. The three files are
+  living (table above) but were stamped once on 2026-10-15 by a local run; each proof still attests that day's text, and
+  after the files changed it no longer matched them (EMPIRICAL.md since 2026-11-20, the other two today). They will not be
+  stamped again; the weekly RFC 3161 manifest dates every version. Nothing frozen yet.

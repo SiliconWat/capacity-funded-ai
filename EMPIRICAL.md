@@ -57,7 +57,7 @@ These are analogies from a different task, not estimates of λ. The simulation s
 are fixed only in the pre-registration, after the founder's review of the model, and P2's range for λ\* cannot claim
 more than this table does.
 
-### What this reads against in the model (for the model's review; `MODEL.md` is unchanged)
+### What this reads against in the model (ruled at the model's review, 2026-11-26; `MODEL.md` carries each ruling)
 
 1. **Aversion is not λ < 0.** `MODEL.md` glosses λ < 0 as aversion, and this file used to say the algorithm
    literature requires it. Neither paper shows it: aversion here means less reliance, λ falling toward 0. Keep
@@ -79,7 +79,11 @@ more than this table does.
 6. **λ is not independent of the other inputs.** It falls with seen errors (*σ_a*) and with expertise (*σ_h*), and it
    is held constant across periods. The planned Sobol analysis treats its inputs as independent.
 
-## E2. A pre-registered online experiment (the centerpiece; what a grant would fund)
+**Ruled 2026-11-26 (the founder's review):** 1 → λ < 0 swept with no anchor · 2 → the case *C°* in the model,
+and arm E below if E2 runs · 3 → out of scope, stated · 4 → λ is deference only, dependence covered by the
+sweep · 5 → one scale · 6 → λ = λ₀ · *g*(*σ_a*, *σ_h*), with λ₀ and the slopes as the independent inputs.
+
+## E2. A pre-registered online experiment (what a grant would fund; decided after the simulation)
 
 Participants on an online research panel each direct a pool of real money, paid to real charities after
 the study, among several charities.
@@ -90,6 +94,7 @@ the study, among several charities.
 | B, anonymous | the same contribution, disclosed only in aggregate ("the pool includes contributions from several sources, one of them an AI system"), never per contribution | the paper's design: transparent overall, anonymous per contribution (§4.4) |
 | C, control | no AI contribution | the baseline |
 | D, human funder | the same contribution, attributed to a human donor | whether the pull is about AI or about any visible funder |
+| E, shown, unnamed (added 2026-11-26) | the same allocation shown, its source not named | whether the pull is the visible allocation or the name (E1, point 2) |
 
 - **Primary outcome:** the shift of participants' allocations toward the AI's allocation, A against B. That
   is λ, measured.
@@ -117,5 +122,23 @@ AI), anonymity protects the AI's choices instead of the humans'. Either result i
 
 ## Order
 
-E1 now (free) → E2 designed and costed (the grant application) → E2 pre-registration and ethics review →
-E2 run → E3 when a suitable public dataset is identified.
+*Revised 2026-11-26 (founder: "go per your recommendation"): the simulation runs first, with no human
+participants, and E2 waits for what it finds.*
+
+E1 (read 2026-11-05) → the simulation (`PLAN.md` steps 3 to 5) → **E2 decided by the simulation's λ\*** →
+if it runs: designed and costed (the grant application), pre-registered, ethics review, run → E3 when a
+suitable public dataset is identified.
+
+- **The deciding rule** (approved at the model's review, 2026-11-26), fixed in `PREREGISTRATION.md` before any model
+  code so the simulation's result cannot choose it. λ\* is not one number: it moves with *K*, *ρ*, *q* and
+  *σ_a*, and results are reported as regions. So the candidate reads it as a share: E2 is designed and costed
+  if λ\* is at or below the top of E1's anchors (0.50) in at least half of the swept region of the other
+  inputs; otherwise it waits. The 0.50 and the half are both judgments (E1's anchors are analogies from
+  another task), and the hostile reader may argue them differently before the pre-registration.
+- **What E2 would test.** Arm A shows "the AI's own allocation". Under the paper's current form, *C\**, a
+  public draw picks the recipients and *A* has no allocation to show, so E2 tests the premise of the
+  disclosed variant *C*, and the open question of row D above: whether people's allocations among recipients
+  move toward a shown one at all, which nothing read so far measures.
+- **Two design questions owed before E2's pre-registration, if it runs:** arm D shows "the same
+  contribution, attributed to a human donor", which is true only if a real human donor stands behind that
+  allocation; and reproducing arm A means naming the AI system and version that made the allocation.
